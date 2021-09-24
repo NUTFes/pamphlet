@@ -1,26 +1,37 @@
-﻿body {
+﻿@charset "utf-8";
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
   width: 100%;
   height: 100%;
   background-color: #999;
 }
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #flipbook {
-  max-width: 500px;
-  height: 95vh;
-  margin: 2.5vh auto 0;
-}
-div {
-  color: #333;
-  position: relative;
-}
-.p1,
-.p2,
-.p3,
-.p4,
-.p5,
-.p6 {
-  max-height: 100vh;
-  background-position: center;
-  background-size: cover;
+  /* パンフの横幅 */
+  max-width: 490px;
+  width: 95vw;
+  /* パンフの縦幅最大値 */
+  max-height: calc(490px * 1.414);
+  max-height : -webkit-calc(490px * 1.414);
+  /* パンフの縦幅 */
+  height: calc(95vw * 1.414);
+  height : -webkit-calc(95vw * 1.414);
+  /* パンフの位置上下左右中央寄せ */
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); */
 }
 img {
   width: 100%;
